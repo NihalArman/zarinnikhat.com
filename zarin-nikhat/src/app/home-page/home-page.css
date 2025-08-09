@@ -1,0 +1,17 @@
+.container {
+  max-width: 800px;
+}
+
+h1 {
+  color: #4b3f72; /* Deep artistic purple */
+}
+
+.btn-primary {
+  background-color: #6c63ff;
+  border-color: #6c63ff;
+}
+
+.btn-primary:hover {
+  background-color: #594fe8;
+  border-color: #594fe8;
+}
