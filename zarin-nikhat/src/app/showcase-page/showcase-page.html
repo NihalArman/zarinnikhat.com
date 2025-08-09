@@ -1,10 +1,9 @@
 <div class="container py-5">
-
-  <!-- Clay Works -->
+  <!-- Digital Painting -->
   <section class="mb-5">
-    <h2 class="section-title text-center mb-4">Clay Works</h2>
+    <h2 class="section-title text-center mb-4">Digital Painting</h2>
     <div class="row g-4">
-      @for (img of clayImages; track img) {
+      @for (img of digitalPaintings; track img) {
         <div class="col-6 col-md-4 col-lg-3">
           <img
             [ngSrc]="'assets/showcases/' + img"
@@ -24,11 +23,11 @@
     </div>
   </section>
 
-  <!-- Digital Painting -->
+  <!-- Clay Works -->
   <section class="mb-5">
-    <h2 class="section-title text-center mb-4">Digital Painting</h2>
+    <h2 class="section-title text-center mb-4">Clay Works</h2>
     <div class="row g-4">
-      @for (img of digitalPaintings; track img) {
+      @for (img of clayImages; track img) {
         <div class="col-6 col-md-4 col-lg-3">
           <img
             [ngSrc]="'assets/showcases/' + img"
