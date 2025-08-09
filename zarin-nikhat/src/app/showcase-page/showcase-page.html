@@ -1,18 +1,85 @@
-<p>showcase-page works!</p>
-<img
-  [ngSrc]="'assets/showcases/purple-flower.jpeg'"
-  class="img-fluid rounded"
-  style="max-width: 400px;"
-  alt="showcase image"
-  width="400"
-  height="300"
-/>
+<div class="container py-5">
 
-<img
-  [ngSrc]="'assets/showcases/sandy-beach.jpeg'"
-  class="img-fluid rounded"
-  style="max-width: 400px;"
-  alt="showcase image"
-  width="400"
-  height="300"
-/>
+  <!-- Clay Works -->
+  <section class="mb-5">
+    <h2 class="section-title text-center mb-4">Clay Works</h2>
+    <div class="row g-4">
+      @for (img of clayImages; track img) {
+        <div class="col-6 col-md-4 col-lg-3">
+          <img
+            [ngSrc]="'assets/showcases/' + img"
+            width="400"
+            height="300"
+            class="img-fluid rounded shadow-sm"
+            alt="Clay work"
+            (click)="openImage('assets/showcases/' + img)"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+          />
+        </div>
+      }
+      @empty {
+        <div class="col-12 text-muted text-center">No clay works yet.</div>
+      }
+    </div>
+  </section>
+
+  <!-- Digital Painting -->
+  <section class="mb-5">
+    <h2 class="section-title text-center mb-4">Digital Painting</h2>
+    <div class="row g-4">
+      @for (img of digitalPaintings; track img) {
+        <div class="col-6 col-md-4 col-lg-3">
+          <img
+            [ngSrc]="'assets/showcases/' + img"
+            width="400"
+            height="300"
+            class="img-fluid rounded shadow-sm"
+            alt="Clay work"
+            (click)="openImage('assets/showcases/' + img)"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+          />
+        </div>
+      }
+      @empty {
+        <div class="col-12 text-muted text-center">No clay works yet.</div>
+      }
+    </div>
+  </section>
+
+  <!-- Acrylic Painting -->
+  <section class="mb-5">
+    <h2 class="section-title text-center mb-4">Acrylic Painting</h2>
+    <div class="row g-4">
+      @for (img of acrylicPaintings; track img) {
+        <div class="col-6 col-md-4 col-lg-3">
+          <img
+            [ngSrc]="'assets/showcases/' + img"
+            width="400"
+            height="300"
+            class="img-fluid rounded shadow-sm"
+            alt="Clay work"
+            (click)="openImage('assets/showcases/' + img)"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+          />
+        </div>
+      }
+      @empty {
+        <div class="col-12 text-muted text-center">No clay works yet.</div>
+      }
+    </div>
+  </section>
+
+</div>
+
+<!-- Angular lightbox overlay (no Bootstrap JS required) -->
+@if (selectedImage) {
+  <div class="lightbox-overlay" (click)="closeImage()">
+    <div class="lightbox-inner" (click)="$event.stopPropagation()">
+      <button class="btn-close btn-close-white lightbox-close" (click)="closeImage()" aria-label="Close"></button>
+      <img [ngSrc]="selectedImage" width="1200" height="800" class="img-fluid" alt="Enlarged work" />
+    </div>
+  </div>
+}
