@@ -10,8 +10,9 @@ import { NgOptimizedImage } from '@angular/common';
 })
 export class ShowcasePage {
   clayImages = ['clay1.jpeg', 'clay2.jpeg', 'clay3.jpeg', 'clay4.jpeg', 'clay5.jpeg', 'clay6.jpeg', 'clay7.jpeg', 'clay8.jpeg', 'clay9.jpeg', 'clay10.jpeg'];
-  digitalPaintings = ['digitalart1.jpeg', 'digitalart2.jpeg', 'digitalart3.jpg', 'digitalart4.jpg', 'digitalart5.jpg', 'digitalart6.jpg', 'digitalart7.jpg', 'digitalart8.jpg', 'digitalart9.jpg', 'digitalart10.jpg', 'digitalart11.jpg'];
-  acrylicPaintings = ['acrylicpaint1.jpeg', 'acrylicpaint2.jpeg', 'acrylicpaint3.jpeg', 'acrylicpaint4.jpeg'];
+  digitalPaintings = ['digitalart1.jpeg', 'digitalart2.jpeg', 'digitalart4.jpg', 'digitalart6.jpg', 'digitalart7.jpg', 'digitalart8.jpg', 'digitalart9.jpg', 'digitalart10.jpg'];
+  photography = ['photography1.jpeg', 'photography2.jpeg', 'photography3.jpeg', 'photography4.jpeg', 'photography5.jpeg', 'photography6.jpeg', 'photography7.jpeg', 'photography8.jpeg', 'photography9.jpeg', 'photography10.jpeg', 'photography11.jpeg'];
+  acrylicPaintings = ['acrylicpaint1.jpeg', 'acrylicpaint2.jpeg', 'acrylicpaint3.jpeg'];
 
   selectedImage: string | null = null;
 
